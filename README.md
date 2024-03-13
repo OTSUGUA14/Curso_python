@@ -1,2 +1,2 @@
 # Curso_python
-Actividades de curso de Python casa futuro
+Actividades de curso de Python casa futuro de mendoza
