@@ -1,0 +1,51 @@
+import threading
+import time
+
+
+def contador_1():
+    contador = 0
+    while not condicion_salida.is_set():
+        contador += 1
+        time.sleep(1)
+    print(f"Valor del contador 1: {contador}")
+    
+def contador_2():
+    contador = 0
+    while not condicion_salida.is_set():
+        contador += 1
+        time.sleep(0.5)
+    print(f"Valor del contador 2: {contador}")
+
+condicion_salida = threading.Event()
+
+hilos_activos = False
+while True:
+    entrada = input("Ingrese 1 para iniciar el hilo o 2 para detenerlo: ")
+    if entrada == "1":
+        condicion_salida.clear()
+        hilo_1 = threading.Thread(target=contador_1)
+        hilo_2 = threading.Thread(target=contador_2)
+        hilo_1.start()
+        hilo_2.start()
+        hilos_activos = True
+    elif entrada == "2":
+        condicion_salida.set()
+        try:
+            if hilos_activos:
+                hilo_1.join()
+                hilo_2.join()
+                hilos_activos = False
+            else:
+                raise Exception()
+        except:
+            print("Debe iniciar los hilos antes de detenerlos")
+        else:
+            print("Los hilos fueron detenidos")
+    else:
+        if hilo_1.is_alive():
+            condicion_salida.set()
+            hilo_1.join()
+        if hilo_2.is_alive():
+            condicion_salida.set()
+            hilo_2.join()
+        break
