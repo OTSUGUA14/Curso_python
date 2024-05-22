@@ -1,7 +1,7 @@
 import time 
 class Tamagotchi:
     nivel_energia=100
-    nivel_hambre=100
+    nivel_hambre=0
     nivel_felicidad=50
     humor="indiferente"
     esta_vivo=True
@@ -46,20 +46,20 @@ class Tamagotchi:
         self.nivel_energia=self.modificador(self.nivel_energia,15,"resta")
 
     def jugar(self):
-        if self.nivel_hambre<=20:
+        if self.nivel_hambre>=20:
             self.nivel_felicidad=self.modificador(self.nivel_felicidad,30,"resta")
             self.humor=self.modi_humor(self.nivel_felicidad,self.humor)
             self.nivel_energia=self.modificador(self.nivel_energia,20,"resta")
-            self.nivel_hambre=self.modificador(self.nivel_hambre,10,"resta")
+            self.nivel_hambre=self.modificador(self.nivel_hambre,10,"suma")
             
         else:
             self.nivel_felicidad=self.modificador(self.nivel_felicidad,20,"suma")
             self.humor=self.modi_humor(self.nivel_felicidad,self.humor)
             self.nivel_energia=self.modificador(self.nivel_energia,18,"resta")
-            self.nivel_hambre=self.modificador(self.nivel_hambre,10,"resta")
+            self.nivel_hambre=self.modificador(self.nivel_hambre,10,"suma")
         self.verificar_estado()
     def dormir(self):
-        if self.nivel_hambre<=20:
+        if self.nivel_hambre>=20:
             self.nivel_energia=self.modificador(self.nivel_energia,20,"resta")
             self.nivel_felicidad=self.modificador(self.nivel_felicidad,30,"resta")
             self.humor=self.modi_humor(self.nivel_felicidad,self.humor)
