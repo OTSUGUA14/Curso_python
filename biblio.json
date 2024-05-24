@@ -33,5 +33,12 @@
         "a\u00f1o_publicacion": 1813,
         "disponible": true,
         "unidades": 12
+    },
+    {
+        "titulo": "AUGUsto",
+        "autor": "YO",
+        "a\u00f1o_publicacion": "2004",
+        "disponible": true,
+        "unidades": "2"
     }
 ]

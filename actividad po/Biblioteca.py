@@ -51,17 +51,23 @@ class Biblioteca1():
     }
     ]
     
-    def mostrar_libros(self):
+    def mostrar_libros(self,):
         contador=1
         for i in self.libros:
-            if i=="disponible":
-                pass
-            else: 
-                print(contador,i)
-                print("")
-                contador+=1
+            print(contador, end=": ")
+            for j in i:
+                
+                if j=="disponible":
+                    pass
+                else:
+                    print(j,end=": ")
+                    print(i[j] ,end=" ")
+                    print("")
+            print("")
+            contador+=1
         with open("biblio.json", "w") as archivo:
             json.dump(self.libros, archivo, indent=4)
+
 
     
     def prestar(self,nombre):
@@ -138,11 +144,17 @@ class Biblioteca2():
 ]
 
     def mostrar_libros(self,):
-        contador=0
+        contador=1
         for i in self.libros:
-            print(i["diponible"],"xd")
-
-            print(contador,i)
+            print(contador, end=": ")
+            for j in i:
+                
+                if j=="disponible":
+                    pass
+                else:
+                    print(j,end=": ")
+                    print(i[j] ,end=" ")
+                    print("")
             print("")
             contador+=1
         with open("biblio.json", "w") as archivo:
@@ -190,6 +202,7 @@ def biblio(valor):
     1-Mostrar lista de libros
     2-Agregar libro
     3-Quitar libro
+    4-Salir 
 """)
         try:
             opcion=int(input("Ingrese la opcion que desee: "))
@@ -219,11 +232,13 @@ def biblio(valor):
                     bibio1.mostrar_libros()
                     li=input("Ingrese el libro que se quiere llevar segun su Titulo: ").lower()
                     bibio1.prestar(li)
-                   
+                
                 elif valor==2:
                     bibio2.mostrar_libros()
                     li=input("Ingrese el libro que se quiere llevar segun su Titulo: ").lower()
                     bibio1.prestar(li)
+            elif opcion==4:
+                break
                     
 
 
@@ -232,7 +247,8 @@ while True:
     CON QUE BIBLIOTECA QUIERE TRABAJAR?
     1-BIBLIOTECA OTSU
     2-BIBLIOTECA GUA
-    """)
+    3-TERMINAR 
+          """)
     while True:
         try:
             opcion=int(input("Ingrese con que biblioteca quiere trabajar segun el número: "))
@@ -243,6 +259,9 @@ while True:
                 if opcion==1:
                     biblio(opcion)
                 elif opcion==2:
+                    biblio(opcion)
+                elif opcion==3:
+                    print("ADIOS")
                     break
                 else:
                     print("Numero ingresado no valido")
