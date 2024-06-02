@@ -243,13 +243,14 @@ def biblio(valor):
 
 
 while True:
-    print("""
-    CON QUE BIBLIOTECA QUIERE TRABAJAR?
-    1-BIBLIOTECA OTSU
-    2-BIBLIOTECA GUA
-    3-TERMINAR 
-          """)
     while True:
+        print("""
+        CON QUE BIBLIOTECA QUIERE TRABAJAR?
+        1-BIBLIOTECA OTSU
+        2-BIBLIOTECA GUA
+        3-TERMINAR 
+            """)
+ 
         try:
             opcion=int(input("Ingrese con que biblioteca quiere trabajar segun el número: "))
 

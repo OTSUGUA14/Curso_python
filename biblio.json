@@ -1,44 +1,37 @@
 [
     {
-        "titulo": "Cien a\u00f1os de soledad",
-        "autor": "Gabriel Garc\u00eda M\u00e1rquez",
-        "a\u00f1o_publicacion": 1967,
+        "titulo": "La sombra del viento",
+        "autor": "Carlos Ruiz Zaf\u00f3n",
+        "a\u00f1o_publicacion": 2001,
         "disponible": true,
-        "unidades": 10
+        "unidades": 15
     },
     {
-        "titulo": "1984",
-        "autor": "George Orwell",
-        "a\u00f1o_publicacion": 1949,
-        "disponible": true,
-        "unidades": 8
-    },
-    {
-        "titulo": "Don Quijote de la Mancha",
-        "autor": "Miguel de Cervantes",
-        "a\u00f1o_publicacion": 1605,
-        "disponible": true,
-        "unidades": 5
-    },
-    {
-        "titulo": "El amor en los tiempos del c\u00f3lera",
-        "autor": "Gabriel Garc\u00eda M\u00e1rquez",
-        "a\u00f1o_publicacion": 1985,
-        "disponible": true,
-        "unidades": 7
-    },
-    {
-        "titulo": "Orgullo y prejuicio",
-        "autor": "Jane Austen",
-        "a\u00f1o_publicacion": 1813,
+        "titulo": "Los pilares de la Tierra",
+        "autor": "Ken Follett",
+        "a\u00f1o_publicacion": 1989,
         "disponible": true,
         "unidades": 12
     },
     {
-        "titulo": "AUGUsto",
-        "autor": "YO",
-        "a\u00f1o_publicacion": "2004",
+        "titulo": "El alquimista",
+        "autor": "Paulo Coelho",
+        "a\u00f1o_publicacion": 1988,
         "disponible": true,
-        "unidades": "2"
+        "unidades": 18
+    },
+    {
+        "titulo": "Harry Potter y la piedra filosofal",
+        "autor": "J.K. Rowling",
+        "a\u00f1o_publicacion": 1997,
+        "disponible": true,
+        "unidades": 20
+    },
+    {
+        "titulo": "La casa de los esp\u00edritus",
+        "autor": "Isabel Allende",
+        "a\u00f1o_publicacion": 1982,
+        "disponible": true,
+        "unidades": 10
     }
 ]
